@@ -19,4 +19,36 @@
 9.<start position><command><end position>
   e.g:0y$->yank the whole line content to buffer
 10.gU/gu->make the letter(word) to Upper case or low case:w
-
+11.killer movement:
+    fa->go to the next occurrence of the letter "a" in cursor's line[';' will find the next oocurrence]
+    ta->go to just before the letter "a" in cursor's line
+    3fa->find the 3rd occurrence of the letter "a" in cursor's line
+    dta->remove everything untill the letter "a" in cursor's line
+    F and T->like f and t command but backward
+12.zone selection:
+    <action>a/i<object>:
+        <action>:d/y/v/...
+        <object>:w/W/s(sentence)/p(paragraph)/"/'/(/{/[/...
+    PS:usage->vi)[chosen the inner part waped by ()]/va)[chosen the whole part as vi) and the wapper()]
+       usage->v2i([chosen the second partion of the whole wappers]
+13.select rectangular blocks:
+   this commmand used to be comment action for mutiline code,e.g:^<c-v><jk for move><I//><esc> 
+14.completion:
+    <c-n>and<c-p> then magic happend!
+15.macros:qa do sth q,@a,@@
+    qa:record your action into register a
+    @a:will replay the macro saved into the register a as if you typed it
+    @@:is shortcut to replay the last executed macro
+    PS:here is a example of how to quick insert 1-103 num into a file using macro[http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/]
+16.visual selection:v,V,<c-v>
+    usage:when you use block selection command to select a block,you can use:
+        J(upper case j) to join all lines together
+        <<(or >>) to indentto the left(right)
+        = to auto indent
+    usage:add sth on all seelcted lines ending
+        <c-v>
+        use j/<c-d>/%/... to the desired line
+        $ go to the end of the line
+        A
+        wirte sth you want
+        esc
