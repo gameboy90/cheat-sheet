@@ -1,4 +1,4 @@
-vim_diary
+Cheat sheet for enerything
 =========
 
-gameboy90's vim diary,just record and structure
+Good artists copy, great artists steal. -- Pablo Picasso
